@@ -1,7 +1,7 @@
 package planetsm1;
 import java.util.Scanner;
 /**
- *
+ * http://www.exploratorium.edu/ronh/weight/
  * @author clydejohnson
  */
 public class WeightCalc {
@@ -22,7 +22,7 @@ public class WeightCalc {
         System.out.println( "" );
         System.out.printf( "New weight on Mercury: %s pounds\n", you.getMercury() );
         System.out.printf( "New weight on Venus: %s pounds\n", you.getVenus() );
-        System.out.printf( "New weight on The Moon: %s pounds\n", you.getMoon() );
+        System.out.printf( "New weight on the Moon: %s pounds\n", you.getMoon() );
         System.out.printf( "New weight on Mars: %s pounds\n", you.getMars() );
         System.out.printf( "New weight on Jupiter: %s pounds\n", you.getJupiter() );
         System.out.printf( "New weight on Saturn: %s pounds\n", you.getSaturn() );
