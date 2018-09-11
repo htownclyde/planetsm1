@@ -16,7 +16,7 @@ public class WeightCalc {
         System.out.print("Please enter your name: ");
         int newname = in.nextInt();
         you.setName(newname);
-     //EEEE   System.out.print("Please enter your weight: ");
+        System.out.print("Please enter your weight: ");
         int newweight = in.nextInt();
         you.setWeight(newweight);
         System.out.printf("New number: %s %d\n", you.getName(), you.getWeight());
