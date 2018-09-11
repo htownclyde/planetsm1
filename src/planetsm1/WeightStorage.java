@@ -12,19 +12,21 @@ package planetsm1;
 public class WeightStorage {
     double weight;
     String name;
-    double mercuryfactor;
-    double venusfactor;
-    double moonfactor;
-    double marsfactor;
-    double jupiterfactor;
-    double saturnfactor;
-    double uranusfactor;
-    double neptunefactor;
-    double plutofactor;
+    double mercuryfactor = .3;
+    double venusfactor = .9;
+    double moonfactor = .1;
+    double marsfactor = .3;
+    double jupiterfactor = 2.5;
+    double saturnfactor = 1;
+    double uranusfactor = .8;
+    double neptunefactor = 1.1;
+    double plutofactor = 0;
 
-    WeightStorage(double d, String str) {
+    WeightStorage(double d) {
         weight = d;
-        name = str;
+    }
+    public void setName(String newname){
+        name = newname;
     }
     public double getWeight(){
         return weight;
@@ -32,10 +34,42 @@ public class WeightStorage {
     public String getName(){
         return name;
     }
-    public void setName(str newname){
-        name = newname;
-    }
     public void setWeight(int newweight){
         weight = newweight;
+    }
+    public double getMercury(){
+        return weight*mercuryfactor;
+        
+    }
+    public double getVenus(){
+        return weight*venusfactor;
+        
+    }
+    public double getMoon(){
+        return weight*moonfactor;
+        
+    }
+    public double getMars(){
+        return weight*marsfactor;
+        
+    }
+    public double getJupiter(){
+        return weight*jupiterfactor;
+        
+    }
+    public double getSaturn(){
+        return weight*saturnfactor;
+        
+    }
+    public double getUranus(){
+        return weight*uranusfactor;
+        
+    }
+    public double getNeptune(){
+        return weight*neptunefactor;
+        
+    }
+    public double getPluto(){
+        return weight*plutofactor;   
     }
 }
