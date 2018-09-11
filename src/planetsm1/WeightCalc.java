@@ -1,25 +1,39 @@
+//Declare the package containing WeightCalc
 package planetsm1;
+//Import the Scanner class for use
 import java.util.Scanner;
-/**
+/*
  * http://www.exploratorium.edu/ronh/weight/
  * @author clydejohnson
  */
+//Create the WeightCalc class to execute desired methods
 public class WeightCalc {
     /**
      * @param args the command line arguments
      */
+    //Declare main
     public static void main( String[] args ) {
+        //Create new scanner
         Scanner in = new Scanner( System.in );
+        //Connects WeightStorage to WeightCalc so that WeightCalc can interact 
         WeightStorage you = new WeightStorage( 0.0 );
+        //Prompt for user
         System.out.print( "Please enter your name: " );
+        //Sets newname variable to next input by user
         String newname = in.nextLine();
+        //Uses setName to set stored name to newname variable
         you.setName( newname );
+        //Dialog describes program and uses getName to get user name
         System.out.printf( "\nWelcome, %s. With this program, you can input your weight to learn\nwhat it would be on our moon and other planets in the solar system.\n\n", you.getName() );
-        you.setName( newname );
+        //Prompt for user
         System.out.print("Please enter your weight: ");
+        //Sets newweight variable to next input by user
         int newweight = in.nextInt();
+        //Uses setWeight to set stored weight to newweight variable
         you.setWeight( newweight );
+        //Creates a break between dialog and results
         System.out.println( "" );
+        //Following printf commands call get[Planet] functions from WeightStorage and display them
         System.out.printf( "New weight on Mercury: %s pounds\n", you.getMercury() );
         System.out.printf( "New weight on Venus: %s pounds\n", you.getVenus() );
         System.out.printf( "New weight on the Moon: %s pounds\n", you.getMoon() );

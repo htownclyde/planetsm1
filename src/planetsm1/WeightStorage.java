@@ -1,15 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Declare the package containing WeightStorage
 package planetsm1;
-
-/**
- *
+/*
+ * http://www.exploratorium.edu/ronh/weight/
  * @author clydejohnson
  */
+//Create a class for storing weight values and multipliers
 public class WeightStorage {
+    //Create variables for the user's data, and the weight factors for each planet
     double weight;
     String name;
     double mercuryfactor = .3;
@@ -21,22 +18,27 @@ public class WeightStorage {
     double uranusfactor = .8;
     double neptunefactor = 1.1;
     double plutofactor = 0;
-
+    //Defining arguments for this instance of WeightStorage
     WeightStorage(double d) {
         weight = d;
     }
+    //Sets the name string when called
     public void setName(String newname){
         name = newname;
     }
+    //Returns the weight double when called
     public double getWeight(){
         return weight;
     }
+    //Returns the name string when called
     public String getName(){
         return name;
     }
+    //When called, stores original weight data, which will be referenced by future methods in WeightStorage
     public void setWeight(int newweight){
         weight = newweight;
     }
+    //Methods below return the original weight value times their planet's gravitational factor when called in WeightCalc
     public double getMercury(){
         return weight*mercuryfactor;
         
