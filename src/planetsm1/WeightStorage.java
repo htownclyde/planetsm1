@@ -12,6 +12,15 @@ package planetsm1;
 public class WeightStorage {
     double weight;
     String name;
+    double mercuryfactor;
+    double venusfactor;
+    double moonfactor;
+    double marsfactor;
+    double jupiterfactor;
+    double saturnfactor;
+    double uranusfactor;
+    double neptunefactor;
+    double plutofactor;
 
     WeightStorage(double d, String str) {
         weight = d;
